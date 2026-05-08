@@ -1,431 +1,344 @@
 <!doctype html>
 
 <html lang="es">
-  <head>
+
+<head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <title>Chanchito Budget - Panel de Control</title>
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&amp;display=swap"
+        rel="stylesheet" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&amp;display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
-      rel="stylesheet"
-    />
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
     <script id="tailwind-config">
-      tailwind.config = {
-        darkMode: "class",
-        theme: {
-          extend: {
-            colors: {
-              "on-primary-fixed-variant": "#004299",
-              "on-background": "#191b22",
-              "tertiary-fixed-dim": "#ffb597",
-              "surface-container": "#ededf6",
-              primary: "#003a87",
-              "secondary-fixed-dim": "#00e1ab",
-              "surface-tint": "#195abf",
-              secondary: "#006c50",
-              "on-secondary": "#ffffff",
-              outline: "#737784",
-              "secondary-fixed": "#36ffc4",
-              "on-tertiary-fixed-variant": "#7e2c00",
-              "primary-fixed": "#d9e2ff",
-              "on-primary-container": "#b5caff",
-              "surface-bright": "#faf8ff",
-              background: "#faf8ff",
-              "on-tertiary-fixed": "#360f00",
-              "on-error-container": "#93000a",
-              "on-surface": "#191b22",
-              "on-primary": "#ffffff",
-              "on-secondary-fixed-variant": "#00513c",
-              surface: "#faf8ff",
-              "surface-dim": "#d9d9e2",
-              "surface-container-high": "#e7e7f1",
-              "secondary-container": "#00fabe",
-              "surface-variant": "#e1e2eb",
-              "surface-container-highest": "#e1e2eb",
-              tertiary: "#6f2600",
-              "on-surface-variant": "#424753",
-              "error-container": "#ffdad6",
-              "inverse-surface": "#2e3037",
-              "inverse-primary": "#afc6ff",
-              "surface-container-lowest": "#ffffff",
-              "inverse-on-surface": "#f0f0f9",
-              "primary-container": "#0050b5",
-              "on-error": "#ffffff",
-              "surface-container-low": "#f3f3fc",
-              "outline-variant": "#c3c6d5",
-              "primary-fixed-dim": "#afc6ff",
-              "on-primary-fixed": "#001944",
-              "tertiary-container": "#953600",
-              "on-secondary-container": "#006f52",
-              "on-tertiary": "#ffffff",
-              "on-secondary-fixed": "#002116",
-              "tertiary-fixed": "#ffdbcd",
-              "on-tertiary-container": "#ffba9e",
-              error: "#ba1a1a",
-            },
-            borderRadius: {
-              DEFAULT: "0.25rem",
-              lg: "0.5rem",
-              xl: "0.75rem",
-              full: "9999px",
-            },
-            spacing: {
-              "stack-md": "12px",
-              "stack-lg": "24px",
-              gutter: "16px",
-              "container-padding": "24px",
-              "stack-sm": "4px",
-              base: "8px",
-            },
-            fontFamily: {
-              display: ["Plus Jakarta Sans"],
-              "headline-md": ["Plus Jakarta Sans"],
-              "headline-lg": ["Plus Jakarta Sans"],
-              "body-sm": ["Plus Jakarta Sans"],
-              "body-lg": ["Plus Jakarta Sans"],
-              "label-caps": ["Plus Jakarta Sans"],
-            },
-            fontSize: {
-              display: [
-                "40px",
-                {
-                  lineHeight: "48px",
-                  letterSpacing: "-0.02em",
-                  fontWeight: "800",
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "on-primary-fixed-variant": "#004299",
+                        "on-background": "#191b22",
+                        "tertiary-fixed-dim": "#ffb597",
+                        "surface-container": "#ededf6",
+                        primary: "#003a87",
+                        "secondary-fixed-dim": "#00e1ab",
+                        "surface-tint": "#195abf",
+                        secondary: "#006c50",
+                        "on-secondary": "#ffffff",
+                        outline: "#737784",
+                        "secondary-fixed": "#36ffc4",
+                        "on-tertiary-fixed-variant": "#7e2c00",
+                        "primary-fixed": "#d9e2ff",
+                        "on-primary-container": "#b5caff",
+                        "surface-bright": "#faf8ff",
+                        background: "#faf8ff",
+                        "on-tertiary-fixed": "#360f00",
+                        "on-error-container": "#93000a",
+                        "on-surface": "#191b22",
+                        "on-primary": "#ffffff",
+                        "on-secondary-fixed-variant": "#00513c",
+                        surface: "#faf8ff",
+                        "surface-dim": "#d9d9e2",
+                        "surface-container-high": "#e7e7f1",
+                        "secondary-container": "#00fabe",
+                        "surface-variant": "#e1e2eb",
+                        "surface-container-highest": "#e1e2eb",
+                        tertiary: "#6f2600",
+                        "on-surface-variant": "#424753",
+                        "error-container": "#ffdad6",
+                        "inverse-surface": "#2e3037",
+                        "inverse-primary": "#afc6ff",
+                        "surface-container-lowest": "#ffffff",
+                        "inverse-on-surface": "#f0f0f9",
+                        "primary-container": "#0050b5",
+                        "on-error": "#ffffff",
+                        "surface-container-low": "#f3f3fc",
+                        "outline-variant": "#c3c6d5",
+                        "primary-fixed-dim": "#afc6ff",
+                        "on-primary-fixed": "#001944",
+                        "tertiary-container": "#953600",
+                        "on-secondary-container": "#006f52",
+                        "on-tertiary": "#ffffff",
+                        "on-secondary-fixed": "#002116",
+                        "tertiary-fixed": "#ffdbcd",
+                        "on-tertiary-container": "#ffba9e",
+                        error: "#ba1a1a",
+                    },
+                    borderRadius: {
+                        DEFAULT: "0.25rem",
+                        lg: "0.5rem",
+                        xl: "0.75rem",
+                        full: "9999px",
+                    },
+                    spacing: {
+                        "stack-md": "12px",
+                        "stack-lg": "24px",
+                        gutter: "16px",
+                        "container-padding": "24px",
+                        "stack-sm": "4px",
+                        base: "8px",
+                    },
+                    fontFamily: {
+                        display: ["Plus Jakarta Sans"],
+                        "headline-md": ["Plus Jakarta Sans"],
+                        "headline-lg": ["Plus Jakarta Sans"],
+                        "body-sm": ["Plus Jakarta Sans"],
+                        "body-lg": ["Plus Jakarta Sans"],
+                        "label-caps": ["Plus Jakarta Sans"],
+                    },
+                    fontSize: {
+                        display: [
+                            "40px",
+                            {
+                                lineHeight: "48px",
+                                letterSpacing: "-0.02em",
+                                fontWeight: "800",
+                            },
+                        ],
+                        "headline-md": [
+                            "20px",
+                            { lineHeight: "28px", fontWeight: "700" },
+                        ],
+                        "headline-lg": [
+                            "24px",
+                            { lineHeight: "32px", fontWeight: "700" },
+                        ],
+                        "body-sm": ["14px", { lineHeight: "20px", fontWeight: "400" }],
+                        "body-lg": ["16px", { lineHeight: "24px", fontWeight: "500" }],
+                        "label-caps": [
+                            "12px",
+                            {
+                                lineHeight: "16px",
+                                letterSpacing: "0.05em",
+                                fontWeight: "700",
+                            },
+                        ],
+                    },
                 },
-              ],
-              "headline-md": [
-                "20px",
-                { lineHeight: "28px", fontWeight: "700" },
-              ],
-              "headline-lg": [
-                "24px",
-                { lineHeight: "32px", fontWeight: "700" },
-              ],
-              "body-sm": ["14px", { lineHeight: "20px", fontWeight: "400" }],
-              "body-lg": ["16px", { lineHeight: "24px", fontWeight: "500" }],
-              "label-caps": [
-                "12px",
-                {
-                  lineHeight: "16px",
-                  letterSpacing: "0.05em",
-                  fontWeight: "700",
-                },
-              ],
             },
-          },
-        },
-      };
+        };
     </script>
     <style>
-      .material-symbols-outlined {
-        font-variation-settings:
-          "FILL" 0,
-          "wght" 400,
-          "GRAD" 0,
-          "opsz" 24;
-      }
-      .minimal-shadow {
-        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
-      }
-      .soft-transition {
-        transition: all 0.2s ease-in-out;
-      }
+        .material-symbols-outlined {
+            font-variation-settings:
+                "FILL" 0,
+                "wght" 400,
+                "GRAD" 0,
+                "opsz" 24;
+        }
+
+        .minimal-shadow {
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+        }
+
+        .soft-transition {
+            transition: all 0.2s ease-in-out;
+        }
     </style>
-  </head>
-  <body class="bg-background text-on-background font-body-lg">
+</head>
+
+<body class="bg-background text-on-background font-body-lg">
     <!-- Main Layout Container -->
-    <div
-      class="relative flex h-auto min-h-screen w-full flex-col bg-white group/design-root overflow-x-hidden"
-      style="
+    <div class="relative flex h-auto min-h-screen w-full flex-col bg-white group/design-root overflow-x-hidden" style="
         --select-button-svg: url(&quot;data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%2724px%27 height=%2724px%27 fill=%27rgb(115,119,132)%27 viewBox=%270 0 256 256%27%3e%3cpath d=%27M181.66,170.34a8,8,0,0,1,0,11.32l-48,48a8,8,0,0,1-11.32,0l-48-48a8,8,0,0,1,11.32-11.32L128,212.69l42.34-42.35A8,8,0,0,1,181.66,170.34Zm-96-84.68L128,43.31l42.34,42.35a8,8,0,0,0,11.32-11.32l-48-48a8,8,0,0,0-11.32,0l-48,48A8,8,0,0,0,85.66,85.66Z%27%3e%3c/path%3e%3c/svg%3e&quot;);
-      "
-    >
-      <div class="layout-container flex h-full grow flex-col">
-        <div class="px-4 md:px-20 lg:px-60 flex flex-1 justify-center py-12">
-          <div
-            class="layout-content-container flex flex-col max-w-[1000px] flex-1"
-          >
-            <!-- Top Navigation / Branding -->
-            <header class="flex items-center justify-between mb-16 px-4">
-              <div class="flex items-center gap-2">
-                <span class="material-symbols-outlined text-primary size-6"
-                  >savings</span
-                >
-                <span
-                  class="font-display font-extrabold text-lg tracking-tight text-on-surface"
-                  >pigSave+</span
-                >
-              </div>
-              <div class="flex items-center gap-4">
-                <button
-                  class="flex items-center gap-2 px-4 py-2 bg-surface-container-low text-on-surface hover:bg-surface-container-high rounded-xl soft-transition font-bold text-sm stitch-anim-fade-in"
-                >
-                  <span class="material-symbols-outlined text-lg"
-                    >picture_as_pdf</span
-                  >
-                  <span class="">Imprimir a PDF</span></button
-                ><a href="dashboard.html"><button
-                  class="flex items-center gap-2 px-4 py-2 bg-primary text-white hover:opacity-90 rounded-xl soft-transition font-bold text-sm"
-                >
-                  <span class="material-symbols-outlined text-lg"
-                    >analytics</span
-                  >
-                  <span class="">Ver análisis de gastos</span>
-                </button></a>
-              </div>
-            </header>
-            <!-- Hero Section: Simplified Salary Input -->
-            <!-- Summary Section: Clean Progress -->
-            <section class="px-4 mb-8">
-              <div
-                class="bg-surface-container-lowest border border-surface-container p-6 rounded-2xl minimal-shadow"
-              >
-                <h2
-                  class="text-sm font-bold mb-4 text-on-surface uppercase tracking-widest"
-                >
-                  Configurar Presupuesto
-                </h2>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  <div class="space-y-1.5">
-                    <label
-                      class="text-[10px] font-bold text-outline uppercase tracking-wider pl-1"
-                      >Presupuesto Mensual</label
-                    >
-                    <div class="relative">
-                      <span
-                        class="absolute left-4 top-1/2 -translate-y-1/2 text-on-surface-variant font-medium text-sm"
-                        >$</span
-                      >
-                      <input
-                        class="w-full h-11 rounded-xl border border-outline-variant bg-white text-on-surface pl-8 pr-4 focus:ring-1 focus:ring-primary focus:border-primary outline-none soft-transition text-sm"
-                        placeholder="0.00"
-                        type="number"
-                      />
-                    </div>
-                  </div>
-                  <div class="flex items-end">
-                    <button
-                      class="w-full h-11 bg-primary text-white rounded-xl font-bold text-sm hover:opacity-90 soft-transition"
-                    >
-                      Actualizar Presupuesto
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </section>
-            <section class="px-4 mb-16">
-              <div
-                class="bg-surface-container-low p-8 rounded-2xl minimal-shadow"
-              >
-                <div
-                  class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-6"
-                >
-                  <div>
-                    <p
-                      class="text-[11px] font-bold text-outline uppercase tracking-[0.1em] mb-1"
-                    >
-                      Presupuesto Mensual
-                    </p>
-                    <h3 class="text-2xl font-bold text-on-surface">
-                      $3,450.00
-                      <span
-                        class="text-body-sm font-normal text-on-surface-variant"
-                        >/ $5,000.00</span
-                      >
-                    </h3>
-                  </div>
-                  <div class="flex items-center gap-2">
-                    <span class="text-headline-md font-extrabold text-primary"
-                      >69%</span
-                    >
-                    <span class="text-body-sm text-on-surface-variant"
-                      >utilizado este mes</span
-                    >
-                  </div>
-                </div>
-                <div
-                  class="w-full bg-surface-container-high h-2 rounded-full overflow-hidden"
-                >
-                  <div
-                    class="bg-primary h-full rounded-full transition-all duration-700"
-                    style="width: 69%"
-                  ></div>
-                </div>
-                <div class="flex justify-between mt-4">
-                  <span class="text-body-sm text-on-surface-variant font-medium"
-                    >Vas por buen camino</span
-                  >
-                  <span class="text-body-sm font-bold text-on-surface"
-                    >$1,550.00 restantes</span
-                  >
-                </div>
-              </div>
-            </section>
-            <div class="px-4 space-y-12">
-              <!-- Simplified Add Expense Form -->
-              <div
-                class="bg-surface-container-lowest border border-surface-container p-6 rounded-2xl minimal-shadow"
-              >
-                <h2
-                  class="text-sm font-bold mb-4 text-on-surface uppercase tracking-widest"
-                >
-                  Registrar Nuevo Gasto
-                </h2>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-                  <div class="space-y-1.5">
-                    <label
-                      class="text-[10px] font-bold text-outline uppercase tracking-wider pl-1"
-                      >Categoría</label
-                    >
-                    <select
-                      class="w-full h-11 rounded-xl border border-outline-variant bg-white text-on-surface px-4 focus:ring-1 focus:ring-primary focus:border-primary outline-none appearance-none soft-transition text-sm"
-                      style="
+      ">
+        <div class="layout-container flex h-full grow flex-col">
+            <div class="px-4 md:px-20 lg:px-60 flex flex-1 justify-center py-12">
+                <div class="layout-content-container flex flex-col max-w-[1000px] flex-1">
+                    <!-- Top Navigation / Branding -->
+                    <header class="flex items-center justify-between mb-16 px-4">
+                        <div class="flex items-center gap-2">
+                            <span class="material-symbols-outlined text-primary size-6">savings</span>
+                            <span
+                                class="font-display font-extrabold text-lg tracking-tight text-on-surface">pigSave+</span>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <button
+                                class="flex items-center gap-2 px-4 py-2 bg-surface-container-low text-on-surface hover:bg-surface-container-high rounded-xl soft-transition font-bold text-sm stitch-anim-fade-in">
+                                <span class="material-symbols-outlined text-lg">picture_as_pdf</span>
+                                <span class="">Imprimir a PDF</span></button><a href="dashboard.html"><button
+                                    class="flex items-center gap-2 px-4 py-2 bg-primary text-white hover:opacity-90 rounded-xl soft-transition font-bold text-sm">
+                                    <span class="material-symbols-outlined text-lg">analytics</span>
+                                    <span class="">Ver análisis de gastos</span>
+                                </button></a>
+                        </div>
+                    </header>
+                    <!-- Hero Section: Simplified Salary Input -->
+                    <!-- Summary Section: Clean Progress -->
+                    <section class="px-4 mb-8">
+                        <div
+                            class="bg-surface-container-lowest border border-surface-container p-6 rounded-2xl minimal-shadow">
+                            <h2 class="text-sm font-bold mb-4 text-on-surface uppercase tracking-widest">
+                                Configurar Presupuesto
+                            </h2>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <div class="space-y-1.5">
+                                    <label
+                                        class="text-[10px] font-bold text-outline uppercase tracking-wider pl-1">Presupuesto
+                                        Mensual</label>
+                                    <div class="relative">
+                                        <span
+                                            class="absolute left-4 top-1/2 -translate-y-1/2 text-on-surface-variant font-medium text-sm">$</span>
+                                        <input
+                                            class="w-full h-11 rounded-xl border border-outline-variant bg-white text-on-surface pl-8 pr-4 focus:ring-1 focus:ring-primary focus:border-primary outline-none soft-transition text-sm"
+                                            placeholder="0.00" type="number" />
+                                    </div>
+                                </div>
+                                <div class="flex items-end">
+                                    <button
+                                        class="w-full h-11 bg-primary text-white rounded-xl font-bold text-sm hover:opacity-90 soft-transition">
+                                        Actualizar Presupuesto
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="px-4 mb-16">
+                        <div class="bg-surface-container-low p-8 rounded-2xl minimal-shadow">
+                            <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-6">
+                                <div>
+                                    <p class="text-[11px] font-bold text-outline uppercase tracking-[0.1em] mb-1">
+                                        Presupuesto Mensual
+                                    </p>
+                                    <h3 class="text-2xl font-bold text-on-surface">
+                                        $3,450.00
+                                        <span class="text-body-sm font-normal text-on-surface-variant">/
+                                            $5,000.00</span>
+                                    </h3>
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <span class="text-headline-md font-extrabold text-primary">69%</span>
+                                    <span class="text-body-sm text-on-surface-variant">utilizado este mes</span>
+                                </div>
+                            </div>
+                            <div class="w-full bg-surface-container-high h-2 rounded-full overflow-hidden">
+                                <div class="bg-primary h-full rounded-full transition-all duration-700"
+                                    style="width: 69%"></div>
+                            </div>
+                            <div class="flex justify-between mt-4">
+                                <span class="text-body-sm text-on-surface-variant font-medium">Vas por buen
+                                    camino</span>
+                                <span class="text-body-sm font-bold text-on-surface">$1,550.00 restantes</span>
+                            </div>
+                        </div>
+                    </section>
+                    <div class="px-4 space-y-12">
+                        <!-- Simplified Add Expense Form -->
+                        <div
+                            class="bg-surface-container-lowest border border-surface-container p-6 rounded-2xl minimal-shadow">
+                            <h2 class="text-sm font-bold mb-4 text-on-surface uppercase tracking-widest">
+                                Registrar Nuevo Gasto
+                            </h2>
+                            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                                <div class="space-y-1.5">
+                                    <label
+                                        class="text-[10px] font-bold text-outline uppercase tracking-wider pl-1">Categoría</label>
+                                    <select
+                                        class="w-full h-11 rounded-xl border border-outline-variant bg-white text-on-surface px-4 focus:ring-1 focus:ring-primary focus:border-primary outline-none appearance-none soft-transition text-sm"
+                                        style="
                         background-image: var(--select-button-svg);
                         background-repeat: no-repeat;
                         background-position: right 1rem center;
-                      "
-                    >
-                      <option value="">Seleccionar...</option>
-                      <option value="food">Alimentación</option>
-                      <option value="education">Educación</option>
-                      <option value="entertainment">Entretenimiento</option>
-                      <option value="savings">Ahorro</option>
-                    </select>
-                  </div>
-                  <div class="space-y-1.5">
-                    <label
-                      class="text-[10px] font-bold text-outline uppercase tracking-wider pl-1"
-                      >Monto</label
-                    >
-                    <div class="relative">
-                      <span
-                        class="absolute left-4 top-1/2 -translate-y-1/2 text-on-surface-variant font-medium text-sm"
-                        >$</span
-                      >
-                      <input
-                        class="w-full h-11 rounded-xl border border-outline-variant bg-white text-on-surface pl-8 pr-4 focus:ring-1 focus:ring-primary focus:border-primary outline-none soft-transition text-sm"
-                        placeholder="0.00"
-                        type="number"
-                      />
+                      ">
+                                        <option value="">Seleccionar...</option>
+                                        <option value="food">Alimentación</option>
+                                        <option value="education">Educación</option>
+                                        <option value="entertainment">Entretenimiento</option>
+                                        <option value="savings">Ahorro</option>
+                                    </select>
+                                </div>
+                                <div class="space-y-1.5">
+                                    <label
+                                        class="text-[10px] font-bold text-outline uppercase tracking-wider pl-1">Monto</label>
+                                    <div class="relative">
+                                        <span
+                                            class="absolute left-4 top-1/2 -translate-y-1/2 text-on-surface-variant font-medium text-sm">$</span>
+                                        <input
+                                            class="w-full h-11 rounded-xl border border-outline-variant bg-white text-on-surface pl-8 pr-4 focus:ring-1 focus:ring-primary focus:border-primary outline-none soft-transition text-sm"
+                                            placeholder="0.00" type="number" />
+                                    </div>
+                                </div>
+                                <div class="flex items-end">
+                                    <button
+                                        class="w-full h-11 bg-primary text-white rounded-xl font-bold text-sm hover:opacity-90 soft-transition">
+                                        Agregar Gasto
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            class="bg-surface-container-lowest border border-surface-container p-6 rounded-2xl minimal-shadow mt-12">
+                            <h2 class="text-sm font-bold mb-6 text-on-surface uppercase tracking-widest">
+                                Gastos Recientes
+                            </h2>
+                            <div class="overflow-x-auto">
+                                <table class="w-full text-left">
+                                    <thead>
+                                        <tr class="border-b border-surface-container">
+                                            <th
+                                                class="pb-4 text-[10px] font-bold text-outline uppercase tracking-wider">
+                                                Concepto
+                                            </th>
+                                            <th
+                                                class="pb-4 text-[10px] font-bold text-outline uppercase tracking-wider">
+                                                Monto
+                                            </th>
+                                            <th
+                                                class="pb-4 text-[10px] font-bold text-outline uppercase tracking-wider text-right">
+                                                Acciones
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="divide-y divide-surface-container">
+                                        <tr class="soft-transition hover:bg-surface-container-low/50">
+                                            <td class="py-4 py-4 text-sm font-medium text-on-surface">
+                                                Alquiler
+                                            </td>
+                                            <td class="py-4 text-sm font-bold text-on-surface">
+                                                $1,035.00
+                                            </td>
+                                            <td class="py-4 text-right">
+                                                <div class="flex justify-end gap-2">
+                                                    <button
+                                                        class="p-2 text-outline hover:text-primary hover:bg-surface-container rounded-lg soft-transition"
+                                                        title="Editar">
+                                                        <span class="material-symbols-outlined text-lg">edit</span>
+                                                    </button>
+                                                    <button
+                                                        class="p-2 text-outline hover:text-error hover:bg-error-container/20 rounded-lg soft-transition"
+                                                        title="Eliminar">
+                                                        <span class="material-symbols-outlined text-lg">delete</span>
+                                                    </button>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <!-- Budget Overview Grid -->
                     </div>
-                  </div>
-                  <div class="flex items-end">
-                    <button
-                      class="w-full h-11 bg-primary text-white rounded-xl font-bold text-sm hover:opacity-90 soft-transition"
-                    >
-                      Agregar Gasto
-                    </button>
-                  </div>
+                    <!-- Simplified Footer -->
+                    <footer class="mt-32 pt-12 pb-20 border-t border-surface-container px-4">
+                        <div class="flex flex-col md:flex-row items-center justify-between gap-8">
+                            <div class="flex items-center gap-2">
+                                <span class="material-symbols-outlined text-outline size-5">savings</span>
+                                <span class="font-display font-bold text-sm text-outline tracking-tight">pigSave+ ©
+                                    2023</span>
+                            </div>
+                            <div class="flex gap-8 text-[11px] font-bold uppercase tracking-widest text-outline">
+                                <a class="hover:text-primary soft-transition" href="#">Privacidad</a>
+                                <a class="hover:text-primary soft-transition" href="#">Términos</a>
+                                <a class="hover:text-primary soft-transition" href="#">Ayuda</a>
+                            </div>
+                        </div>
+                    </footer>
                 </div>
-              </div>
-              <div
-                class="bg-surface-container-lowest border border-surface-container p-6 rounded-2xl minimal-shadow mt-12"
-              >
-                <h2
-                  class="text-sm font-bold mb-6 text-on-surface uppercase tracking-widest"
-                >
-                  Gastos Recientes
-                </h2>
-                <div class="overflow-x-auto">
-                  <table class="w-full text-left">
-                    <thead>
-                      <tr class="border-b border-surface-container">
-                        <th
-                          class="pb-4 text-[10px] font-bold text-outline uppercase tracking-wider"
-                        >
-                          Concepto
-                        </th>
-                        <th
-                          class="pb-4 text-[10px] font-bold text-outline uppercase tracking-wider"
-                        >
-                          Monto
-                        </th>
-                        <th
-                          class="pb-4 text-[10px] font-bold text-outline uppercase tracking-wider text-right"
-                        >
-                          Acciones
-                        </th>
-                      </tr>
-                    </thead>
-                    <tbody class="divide-y divide-surface-container">
-                      <tr
-                        class="soft-transition hover:bg-surface-container-low/50"
-                      >
-                        <td
-                          class="py-4 py-4 text-sm font-medium text-on-surface"
-                        >
-                          Alquiler
-                        </td>
-                        <td class="py-4 text-sm font-bold text-on-surface">
-                          $1,035.00
-                        </td>
-                        <td class="py-4 text-right">
-                          <div class="flex justify-end gap-2">
-                            <button
-                              class="p-2 text-outline hover:text-primary hover:bg-surface-container rounded-lg soft-transition"
-                              title="Editar"
-                            >
-                              <span class="material-symbols-outlined text-lg"
-                                >edit</span
-                              >
-                            </button>
-                            <button
-                              class="p-2 text-outline hover:text-error hover:bg-error-container/20 rounded-lg soft-transition"
-                              title="Eliminar"
-                            >
-                              <span class="material-symbols-outlined text-lg"
-                                >delete</span
-                              >
-                            </button>
-                          </div>
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-              <!-- Budget Overview Grid -->
             </div>
-            <!-- Simplified Footer -->
-            <footer
-              class="mt-32 pt-12 pb-20 border-t border-surface-container px-4"
-            >
-              <div
-                class="flex flex-col md:flex-row items-center justify-between gap-8"
-              >
-                <div class="flex items-center gap-2">
-                  <span class="material-symbols-outlined text-outline size-5"
-                    >savings</span
-                  >
-                  <span
-                    class="font-display font-bold text-sm text-outline tracking-tight"
-                    >pigSave+ © 2023</span
-                  >
-                </div>
-                <div
-                  class="flex gap-8 text-[11px] font-bold uppercase tracking-widest text-outline"
-                >
-                  <a class="hover:text-primary soft-transition" href="#"
-                    >Privacidad</a
-                  >
-                  <a class="hover:text-primary soft-transition" href="#"
-                    >Términos</a
-                  >
-                  <a class="hover:text-primary soft-transition" href="#"
-                    >Ayuda</a
-                  >
-                </div>
-              </div>
-            </footer>
-          </div>
         </div>
-      </div>
     </div>
-  </body>
+</body>
+
 </html>
