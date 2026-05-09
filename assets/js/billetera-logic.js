@@ -25,6 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const btnAccionGasto = document.getElementById('add-expense-btn');
     const tablaGastos = document.getElementById('expenses-table-body');
     const displayNombreUsuario = document.getElementById('user-name-display');
+    const btnPrintPdf = document.getElementById('print-pdf-btn');
 
     // --- Estado de la Aplicación ---
     let estado = {
@@ -180,6 +181,12 @@ document.addEventListener('DOMContentLoaded', () => {
         limpiarFormulario();
         guardarYRefrescar();
     });
+
+    if (btnPrintPdf) {
+        btnPrintPdf.addEventListener('click', () => {
+            window.print();
+        });
+    }
 
     // Inicializar la vista
     actualizarUI();
