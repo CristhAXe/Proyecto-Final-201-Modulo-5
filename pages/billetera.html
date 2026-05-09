@@ -13,23 +13,7 @@
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
         rel="stylesheet" />
     <script src="../assets/tailwind/billetera-tailwind.js"></script>
-    <style>
-        .material-symbols-outlined {
-            font-variation-settings:
-                "FILL" 0,
-                "wght" 400,
-                "GRAD" 0,
-                "opsz" 24;
-        }
-
-        .minimal-shadow {
-            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
-        }
-
-        .soft-transition {
-            transition: all 0.2s ease-in-out;
-        }
-    </style>
+    <link rel="stylesheet" href="../assets/css/billetera.css">
 </head>
 
 <body class="bg-background text-on-background font-body-lg">
@@ -58,8 +42,31 @@
                                 </button></a>
                         </div>
                     </header>
+                    <!-- Bienvenida personalizada -->
+                    <section class="px-4 mb-8">
+                        <h1 class="text-3xl font-black text-on-surface tracking-tight">
+                            ¡Hola, <span id="user-name-display"></span>! 👋
+                        </h1>
+                        <p class="text-on-surface-variant font-medium mt-1">
+                            Aquí tienes el resumen de tus finanzas para hoy.
+                        </p>
+                    </section>
                     <!-- Hero Section: Simplified Salary Input -->
                     <!-- Summary Section: Clean Progress -->
+                    <section class="px-4 mb-8">
+                        <div
+                            class="bg-primary-container text-on-primary-container p-6 rounded-2xl minimal-shadow border border-primary/10 flex items-center gap-4">
+                            <div
+                                class="size-12 rounded-full bg-on-primary-container/10 flex items-center justify-center shrink-0">
+                                <span class="material-symbols-outlined text-on-primary-container">lightbulb</span>
+                            </div>
+                            <div>
+                                <h3 class="text-label-caps mb-1 opacity-80 uppercase">Consejo del día</h3>
+                                <p class="text-body-sm font-medium">Ahorrar el 20% de tus ingresos es un gran paso hacia
+                                    la libertad financiera.</p>
+                            </div>
+                        </div>
+                    </section>
                     <section class="px-4 mb-8">
                         <div
                             class="bg-surface-container-lowest border border-surface-container p-6 rounded-2xl minimal-shadow">
@@ -73,14 +80,14 @@
                                         Mensual</label>
                                     <div class="relative">
                                         <span
-                                            class="absolute left-4 top-1/2 -translate-y-1/2 text-on-surface-variant font-medium text-sm">$</span>
-                                        <input
+                                            class="absolute left-4 top-1/2 -translate-y-1/2 text-on-surface-variant font-medium text-sm">S/</span>
+                                        <input id="budget-input"
                                             class="w-full h-11 rounded-xl border border-outline-variant bg-white text-on-surface pl-8 pr-4 focus:ring-1 focus:ring-primary focus:border-primary outline-none soft-transition text-sm"
                                             placeholder="0.00" type="number" />
                                     </div>
                                 </div>
                                 <div class="flex items-end">
-                                    <button
+                                    <button id="update-budget-btn"
                                         class="w-full h-11 bg-primary text-white rounded-xl font-bold text-sm hover:opacity-90 soft-transition">
                                         Actualizar Presupuesto
                                     </button>
@@ -96,24 +103,28 @@
                                         Presupuesto Mensual
                                     </p>
                                     <h3 class="text-2xl font-bold text-on-surface">
-                                        $3,450.00
+                                        <span id="used-amount-display">S/ 0.00</span>
                                         <span class="text-body-sm font-normal text-on-surface-variant">/
-                                            $5,000.00</span>
+                                            <span id="total-budget-display">S/ 0.00</span></span>
                                     </h3>
                                 </div>
                                 <div class="flex items-center gap-2">
-                                    <span class="text-headline-md font-extrabold text-primary">69%</span>
+                                    <span id="budget-percentage-display"
+                                        class="text-headline-md font-extrabold text-primary">0%</span>
                                     <span class="text-body-sm text-on-surface-variant">utilizado este mes</span>
                                 </div>
                             </div>
                             <div class="w-full bg-surface-container-high h-2 rounded-full overflow-hidden">
-                                <div class="bg-primary h-full rounded-full transition-all duration-700"
-                                    style="width: 69%"></div>
+                                <div id="budget-progress-bar"
+                                    class="bg-primary h-full rounded-full transition-all duration-700"
+                                    style="width: 0%"></div>
                             </div>
                             <div class="flex justify-between mt-4">
-                                <span class="text-body-sm text-on-surface-variant font-medium">Vas por buen
+                                <span id="budget-status-message"
+                                    class="text-body-sm text-on-surface-variant font-medium">Vas por buen
                                     camino</span>
-                                <span class="text-body-sm font-bold text-on-surface">$1,550.00 restantes</span>
+                                <span id="remaining-amount-display" class="text-body-sm font-bold text-on-surface">S/
+                                    0.00 restantes</span>
                             </div>
                         </div>
                     </section>
@@ -128,7 +139,7 @@
                                 <div class="space-y-1.5">
                                     <label
                                         class="text-[10px] font-bold text-outline uppercase tracking-wider pl-1">Categoría</label>
-                                    <select
+                                    <select id="expense-category"
                                         class="w-full h-11 rounded-xl border border-outline-variant bg-white text-on-surface px-4 focus:ring-1 focus:ring-primary focus:border-primary outline-none appearance-none soft-transition text-sm"
                                         style="
                         background-image: var(--select-button-svg);
@@ -147,14 +158,14 @@
                                         class="text-[10px] font-bold text-outline uppercase tracking-wider pl-1">Monto</label>
                                     <div class="relative">
                                         <span
-                                            class="absolute left-4 top-1/2 -translate-y-1/2 text-on-surface-variant font-medium text-sm">$</span>
-                                        <input
+                                            class="absolute left-4 top-1/2 -translate-y-1/2 text-on-surface-variant font-medium text-sm">S/</span>
+                                        <input id="expense-amount"
                                             class="w-full h-11 rounded-xl border border-outline-variant bg-white text-on-surface pl-8 pr-4 focus:ring-1 focus:ring-primary focus:border-primary outline-none soft-transition text-sm"
                                             placeholder="0.00" type="number" />
                                     </div>
                                 </div>
                                 <div class="flex items-end">
-                                    <button
+                                    <button id="add-expense-btn"
                                         class="w-full h-11 bg-primary text-white rounded-xl font-bold text-sm hover:opacity-90 soft-transition">
                                         Agregar Gasto
                                     </button>
@@ -184,29 +195,8 @@
                                             </th>
                                         </tr>
                                     </thead>
-                                    <tbody class="divide-y divide-surface-container">
-                                        <tr class="soft-transition hover:bg-surface-container-low/50">
-                                            <td class="py-4 py-4 text-sm font-medium text-on-surface">
-                                                Alquiler
-                                            </td>
-                                            <td class="py-4 text-sm font-bold text-on-surface">
-                                                $1,035.00
-                                            </td>
-                                            <td class="py-4 text-right">
-                                                <div class="flex justify-end gap-2">
-                                                    <button
-                                                        class="p-2 text-outline hover:text-primary hover:bg-surface-container rounded-lg soft-transition"
-                                                        title="Editar">
-                                                        <span class="material-symbols-outlined text-lg">edit</span>
-                                                    </button>
-                                                    <button
-                                                        class="p-2 text-outline hover:text-error hover:bg-error-container/20 rounded-lg soft-transition"
-                                                        title="Eliminar">
-                                                        <span class="material-symbols-outlined text-lg">delete</span>
-                                                    </button>
-                                                </div>
-                                            </td>
-                                        </tr>
+                                    <tbody id="expenses-table-body" class="divide-y divide-surface-container">
+                                        <!-- Gastos se cargarán aquí -->
                                     </tbody>
                                 </table>
                             </div>
@@ -232,6 +222,7 @@
             </div>
         </div>
     </div>
+    <script src="../assets/js/billetera-logic.js"></script>
 </body>
 
 </html>

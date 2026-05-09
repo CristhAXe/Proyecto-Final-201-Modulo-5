@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>pigSave+ | Bienvenido</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script src="../assets/tailwind/bienvenida-tailwind.js"></script>
+    <link rel="stylesheet" href="../assets/css/bienvenida.css">
+</head>
+
+<body class="bg-surface font-body-lg text-on-surface antialiased">
+    <div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
+        <!-- Background Decorative Elements -->
+        <div class="fixed inset-0 pointer-events-none overflow-hidden">
+            <div
+                class="absolute top-[-10%] right-[-10%] w-[400px] h-[400px] rounded-full bg-primary-fixed/30 blur-[80px]">
+            </div>
+            <div
+                class="absolute bottom-[-10%] left-[-10%] w-[400px] h-[400px] rounded-full bg-secondary-fixed/20 blur-[80px]">
+            </div>
+        </div>
+        <!-- Main Content -->
+        <div class="layout-container flex h-full grow flex-col z-10">
+            <div class="flex flex-1 items-center justify-center p-container-padding">
+                <div class="layout-content-container flex flex-col max-w-[480px] w-full items-center">
+                    <!-- App Logo / Character Placeholder -->
+                    <div class="mb-stack-lg chanchito-shadow">
+                        <div
+                            class="w-32 h-32 bg-surface-container-lowest rounded-full flex items-center justify-center border-4 border-primary-fixed">
+                            <span class="material-symbols-outlined text-[64px] text-primary" data-icon="savings"
+                                style="font-variation-settings: 'FILL' 1;">savings</span>
+                        </div>
+                    </div>
+                    <!-- Shared Component Logic: HeadlineText Style Applied -->
+                    <div class="w-full text-center space-y-stack-md">
+                        <h1 class="text-on-background text-display leading-tight tracking-tight px-4">
+                            ¡Hola! Estás a un paso de comenzar
+                        </h1>
+                        <p class="text-on-surface-variant text-body-lg px-4">
+                            ¿Me podrías dar tu nombre?
+                        </p>
+                    </div>
+                    <!-- Input Section -->
+                    <div class="w-full mt-stack-lg px-4 space-y-gutter">
+                        <div class="flex flex-col gap-2">
+                            <label class="text-label-caps text-primary uppercase px-1">Tu nombre</label>
+                            <div class="relative group">
+                                <input
+                                    id="nombre-usuario"
+                                    class="w-full h-14 px-5 rounded-xl border-2 border-surface-container-high bg-surface-container-lowest text-on-surface placeholder:text-outline-variant focus:border-primary focus:ring-0 transition-all duration-200 text-body-lg shadow-sm"
+                                    placeholder="Ej. Mateo" type="text" />
+                                <div class="absolute inset-y-0 right-4 flex items-center pointer-events-none">
+                                    <span class="material-symbols-outlined text-outline"
+                                        data-icon="person">person</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Action Button -->
+                        <div class="pt-stack-md">
+                            <button
+                                id="btn-continuar"
+                                class="w-full h-14 bg-primary text-on-primary rounded-xl font-bold text-body-lg tracking-wide hover:bg-primary-container transition-all active:scale-[0.98] shadow-lg flex items-center justify-center gap-2 group">
+                                <span>Continuar</span>
+                                <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform"
+                                    data-icon="arrow_forward">arrow_forward</span>
+                            </button>
+                        </div>
+                    </div>
+                    <!-- Subtle Footer Prompt -->
+                    <div class="mt-12 text-center opacity-60">
+                        <div class="flex items-center justify-center gap-2 text-body-sm text-outline">
+                            <span class="material-symbols-outlined text-sm" data-icon="lock"
+                                style="font-variation-settings: 'FILL' 1;">lock</span>
+                            <span>Tus datos están seguros con pigSave+</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Secondary Visual Anchor (Mascot Interaction) -->
+        <div class="fixed bottom-10 right-10 hidden lg:block max-w-[200px]">
+            <div class="bg-surface-container-high p-4 rounded-2xl shadow-xl border border-surface-variant relative">
+                <p class="text-body-sm text-on-surface italic leading-tight">
+                    "¡Estoy ansioso por ayudarte a ahorrar cada centavo!"
+                </p>
+                <div
+                    class="absolute -bottom-2 right-6 w-4 h-4 bg-surface-container-high rotate-45 border-r border-b border-surface-variant">
+                </div>
+            </div>
+        </div>
+        <!-- Brand Aesthetic Visuals -->
+        <div class="hidden">
+            <img data-alt="A friendly, modern piggy bank character illustrated in a professional 3D minimalist style. The pig is styled with soft rounded edges and a vibrant blue primary finish, sitting on a clean, light gray studio background. The lighting is soft and diffused, characteristic of a high-end fintech application. The overall mood is supportive, clean, and financially empowering."
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuC1BxN-i1y9FgY7ucDW4S4ugonvpofeBmgIJLo8_z_jA8Ws3Ab1J4EWgPC3_hOg2AXgo_j_N8A9ngg00q_ctMsYXY3Uip7GdyTys0MQvsPruzeujhoIiACeMrZvrmoTeHZ7a2lSRSchRltyebEKnNWxdqwXzoB6bSC2BtxYZ3IoUWOgz9KXSmsqBPkXqE9DpXYUaOSMt5i9v4i1zTD1oW7Wbb8fTqJQKRdhpbzNVGdZCFp3j7SAsUcxyhIbnpJS5yhpmnqjLKOi5JI" />
+        </div>
+    </div>
+    <script src="../assets/js/bienvenida-logic.js"></script>
+</body>
+
+</html>

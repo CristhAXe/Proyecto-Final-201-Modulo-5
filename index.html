@@ -12,26 +12,7 @@
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <script src="./assets/tailwind/index-tailwind.js">
         </script>
-    <style>
-        .material-symbols-outlined {
-            font-variation-settings:
-                "FILL" 0,
-                "wght" 400,
-                "GRAD" 0,
-                "opsz" 24;
-        }
-
-        .hero-bg {
-            background: radial-gradient(circle at center,
-                    #eef2ff 0%,
-                    #faf8ff 50%,
-                    #f1f5f9 100%);
-        }
-
-        .texture-overlay {
-            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23003a87' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-        }
-    </style>
+    <link rel="stylesheet" href="assets/css/index.css">
 </head>
 
 <body
@@ -40,23 +21,16 @@
     <!-- Header -->
     <header class="w-full flex items-center justify-between px-8 md:px-12 py-8 bg-transparent z-20 shrink-0">
         <div class="flex items-center gap-3">
-            <div class="size-12 overflow-hidden rounded-xl shadow-sm border border-outline-variant/20">
-                <img alt="pigSave+ Logo" class="w-full h-full object-cover"
-                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuAloReJQrQE5n7dc6Mi663IqSO6gaa-_yH98Tb92Hc7HPE9Y_YBSiplRcbpNhIDgFdVd-kGUPKc3hrmR3Knj-RJwdsxRD3P8hORw_vOdBqN00g3_JnatlQLOKYqTiIqCm2iPptCKYjUMJtjxobaCQw4cs-yCmmfpvltVSyFru_G_cPoL7I_S37CbS3iATb-cjRLaVZ8HMW7--EXwwLllzsQkdudhqoXOCEtspvW-PfLR2O5oqk6SVkDf7j1tn-ZaCkUzH2i_nEpc5c" />
-            </div>
+                    <div class="mb-stack-lg chanchito-shadow">
+                        <div
+                            class="w-32 h-32 bg-surface-container-lowest rounded-full flex items-center justify-center border-4 border-primary-fixed">
+                            <span class="material-symbols-outlined text-[64px] text-primary" data-icon="savings"
+                                style="font-variation-settings: 'FILL' 1;">savings</span>
+                        </div>
+                    </div>
             <h2 class="text-on-surface text-2xl font-black leading-tight tracking-tighter">
                 pigSave+
             </h2>
-        </div>
-        <div class="flex gap-4">
-            <button
-                class="flex items-center justify-center rounded-xl h-12 w-12 bg-white/50 backdrop-blur-sm border border-outline-variant/30 text-on-surface-variant hover:bg-white transition-colors">
-                <span class="material-symbols-outlined" data-icon="notifications">notifications</span>
-            </button>
-            <button
-                class="flex items-center justify-center rounded-xl h-12 w-12 bg-white/50 backdrop-blur-sm border border-outline-variant/30 text-on-surface-variant hover:bg-white transition-colors">
-                <span class="material-symbols-outlined" data-icon="account_circle">account_circle</span>
-            </button>
         </div>
     </header>
     <!-- Main Content Area -->
@@ -81,7 +55,7 @@
             </div>
             <!-- Primary Action -->
             <div class="flex flex-col sm:row gap-6 w-full justify-center">
-                <a href="pages/billetera.html"><button
+                <a href="pages/bienvenida.html"><button
                         class="inline-flex min-w-[320px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-20 px-12 bg-primary text-on-primary shadow-2xl hover:bg-primary-container transition-all transform hover:-translate-y-1 active:scale-95 group">
                         <span class="text-2xl font-bold tracking-wide">Empezar presupuesto</span>
                         <span
