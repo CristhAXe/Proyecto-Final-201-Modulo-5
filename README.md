@@ -46,7 +46,7 @@ Este proyecto fue construido utilizando tecnologías web modernas:
 
 Este proyecto ha sido desarrollado con el esfuerzo de:
 
-- **Cristhian (CristhXa)** - [GitHub Profile](https://github.com/CristhAXe)
+- **Cristhian** - [GitHub Profile](https://github.com/CristhAXe)
 - **Alexis** - [GitHub Profile](https://github.com/alexisdaniel962015-stack) 
 
 ---
