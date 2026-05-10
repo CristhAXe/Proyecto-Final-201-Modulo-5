@@ -1,6 +1,6 @@
 # pigSave+ 🐷💰
 
-![Cover](assets/img/index.png)
+![Cover](assets/img/home.png)
 
 **pigSave+** es una herramienta web intuitiva diseñada para ayudarte a gestionar tus finanzas personales de manera sencilla y eficiente. Permite llevar un control riguroso de tus gastos mensuales, visualizar el estado de tu presupuesto en tiempo real y analizar tus hábitos de consumo mediante gráficos detallados.
 
