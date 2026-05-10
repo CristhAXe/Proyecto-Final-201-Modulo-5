@@ -47,7 +47,7 @@ Este proyecto fue construido utilizando tecnologías web modernas:
 Este proyecto ha sido desarrollado con el esfuerzo de:
 
 - **Cristhian (CristhXa)** - [GitHub Profile](https://github.com/CristhAXe)
-- **Alexis** - [GitHub Profile](https://github.com/alexisdaniel962015-stack)) (Contribución en Dashboard y Categorización)
+- **Alexis** - [GitHub Profile](https://github.com/alexisdaniel962015-stack) 
 
 ---
 *Desarrollado como Proyecto Final para el Módulo 5 Enter Tech School 201.*
