@@ -90,11 +90,19 @@ document.addEventListener('DOMContentLoaded', () => {
         dibujarTabla();
     }
 
+    // --- Configuración de Categorías ---
+    const NOMBRES_CATEGORIAS = {
+        food: 'Comida',
+        education: 'Educación',
+        entertainment: 'Entretenimiento',
+        savings: 'Ahorro'
+    };
+
     // Renderiza las filas de la tabla de gastos
     function dibujarTabla() {
         tablaGastos.innerHTML = estado.gastos.map((gasto, index) => `
             <tr class="soft-transition hover:bg-surface-container-low/50">
-                <td class="py-4 text-sm font-medium text-on-surface capitalize">${gasto.categoria}</td>
+                <td class="py-4 text-sm font-medium text-on-surface capitalize">${NOMBRES_CATEGORIAS[gasto.categoria] || gasto.categoria}</td>
                 <td class="py-4 text-sm font-bold text-on-surface">${formatearMoneda(gasto.monto)}</td>
                 <td class="py-4 text-right">
                     <div class="flex justify-end gap-2">

@@ -11,7 +11,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     // --- Configuración de Categorías ---
     const CONFIG_CATEGORIAS = {
-        food: { nombre: 'Alimentación', icono: 'restaurant', color: 'text-primary' },
+        food: { nombre: 'Comida', icono: 'restaurant', color: 'text-primary' },
         education: { nombre: 'Educación', icono: 'school', color: 'text-secondary' },
         entertainment: { nombre: 'Entretenimiento', icono: 'movie', color: 'text-tertiary-container' },
         savings: { nombre: 'Ahorro', icono: 'savings', color: 'text-outline' },
