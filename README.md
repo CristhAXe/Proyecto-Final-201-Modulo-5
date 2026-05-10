@@ -1,5 +1,7 @@
 # pigSave+ 🐷💰
 
+![Cover](assets/img/index.png)
+
 **pigSave+** es una herramienta web intuitiva diseñada para ayudarte a gestionar tus finanzas personales de manera sencilla y eficiente. Permite llevar un control riguroso de tus gastos mensuales, visualizar el estado de tu presupuesto en tiempo real y analizar tus hábitos de consumo mediante gráficos detallados.
 
 ## 🚀 Propósito del Proyecto
@@ -48,3 +50,9 @@ Este proyecto ha sido desarrollado con el esfuerzo de:
 
 ---
 *Desarrollado como Proyecto Final para el Módulo 5 Enter Tech School 201.*
+
+## 📸 Capturas de Pantalla
+
+| Billetera | Dashboard |
+|---|---|
+| ![Billetera](assets/img/billetera.png) | ![Dashboard](assets/img/dashboard.png) |
