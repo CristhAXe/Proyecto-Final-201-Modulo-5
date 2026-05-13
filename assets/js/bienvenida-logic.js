@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (nombre === '') {
              Swal.fire({
                 title: 'Oops 👀',
-                text: 'Entra tu nombre parra continuar',
+                text: 'ingresa un nombre para continuar',
                 icon: 'warning',
                 confirmButtonText: 'Ok'
             });

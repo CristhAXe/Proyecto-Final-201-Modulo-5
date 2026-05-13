@@ -98,11 +98,38 @@ document.addEventListener('DOMContentLoaded', () => {
         savings: 'Ahorro'
     };
 
+    // Iconos por categoría (Material Symbols)
+const ICONOS_CATEGORIAS = {
+    food: 'restaurant',
+    education: 'school',
+    entertainment: 'movie',
+    savings: 'savings'
+};
+
+// Colores del círculo de fondo por categoría
+const COLORES_CATEGORIAS = {
+    food: 'bg-blue-100 text-blue-600',
+    education: 'bg-teal-100 text-teal-600',
+    entertainment: 'bg-orange-100 text-orange-700',
+    savings: 'bg-gray-200 text-gray-600'
+};
+
     // Renderiza las filas de la tabla de gastos
     function dibujarTabla() {
-        tablaGastos.innerHTML = estado.gastos.map((gasto, index) => `
+    tablaGastos.innerHTML = estado.gastos.map((gasto, index) => {
+        const icono = ICONOS_CATEGORIAS[gasto.categoria] || 'category';
+        const colorClase = COLORES_CATEGORIAS[gasto.categoria] || 'bg-gray-100 text-gray-500';
+
+        return `
             <tr class="soft-transition hover:bg-surface-container-low/50">
-                <td class="py-4 text-sm font-medium text-on-surface capitalize">${NOMBRES_CATEGORIAS[gasto.categoria] || gasto.categoria}</td>
+                <td class="py-4 text-sm font-medium text-on-surface capitalize">
+                    <div class="flex items-center gap-3">
+                        <span class="flex items-center justify-center w-9 h-9 rounded-full ${colorClase}">
+                            <span class="material-symbols-outlined text-lg">${icono}</span>
+                        </span>
+                        ${NOMBRES_CATEGORIAS[gasto.categoria] || gasto.categoria}
+                    </div>
+                </td>
                 <td class="py-4 text-sm font-bold text-on-surface">${formatearMoneda(gasto.monto)}</td>
                 <td class="py-4 text-right">
                     <div class="flex justify-end gap-2">
@@ -115,9 +142,9 @@ document.addEventListener('DOMContentLoaded', () => {
                     </div>
                 </td>
             </tr>
-        `).join('');
-    }
-
+        `;
+    }).join('');
+}
     // --- Acciones de Usuario ---
     // Elimina un gasto de la lista
     window.eliminarGasto = (index) => {
