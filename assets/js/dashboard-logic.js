@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- Estado ---
     let gastos = JSON.parse(localStorage.getItem('listaGastos')) || [];
-    
+   let presupuesto = parseFloat(localStorage.getItem('presupuestoMensual')) || 0;
     // Inicializar el selector de mes con el mes actual
     const hoy = new Date();
     const mesActual = `${hoy.getFullYear()}-${String(hoy.getMonth() + 1).padStart(2, '0')}`;
@@ -58,7 +58,10 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         // Actualizar UI
-        displayTotal.textContent = formatearMoneda(totalGeneral);
+      displayTotal.innerHTML = `
+    ${formatearMoneda(totalGeneral)}
+    <span class="text-outline font-normal text-lg">/ ${formatearMoneda(presupuesto)}</span>
+`;
         renderizarGrafico(resumen, totalGeneral);
         renderizarLista(resumen, totalGeneral);
     }
