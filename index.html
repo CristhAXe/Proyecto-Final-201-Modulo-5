@@ -16,115 +16,118 @@
 </head>
 
 <body
-    class="bg-background text-on-background font-['Plus_Jakarta_Sans'] min-h-screen hero-bg relative overflow-x-hidden flex flex-col">
-    <div class="texture-overlay absolute inset-0 opacity-40 pointer-events-none"></div>
-    <!-- Header -->
-    <header class="w-full flex items-center justify-between px-8 md:px-12 py-8 bg-transparent z-20 shrink-0">
-        <div class="flex items-center gap-3">
-                    <div class="chanchito-shadow">
+    class="bg-background text-on-background font-['Plus_Jakarta_Sans'] min-h-screen hero-bg">
+    <div class="relative w-full overflow-x-hidden flex flex-col min-h-screen">
+        <div class="texture-overlay absolute inset-0 opacity-40 pointer-events-none"></div>
+        <!-- Header -->
+        <header class="w-full flex items-center justify-between px-8 md:px-12 py-8 bg-transparent z-20 shrink-0">
+            <div class="flex items-center gap-3">
+                        <div class="chanchito-shadow">
+                            <div
+                                class="animate-hero-left delay-1 w-10 h-10 bg-surface-container-lowest rounded-full flex items-center justify-center border-2 border-primary-fixed">
+                                <span class="material-symbols-outlined text-[20px] text-primary" data-icon="savings"
+                                    style="font-variation-settings: 'FILL' 1;">savings</span>
+                            </div>
+                        </div>
+                <h2 class="animate-hero-left delay-1 text-on-surface text-2xl font-black leading-tight tracking-tighter">
+                    pigSave+
+                </h2>
+            </div>
+        </header>
+        <!-- Main Content Area -->
+        <main class="flex-1 flex flex-col items-center justify-center px-4 relative z-10">
+            <div class="max-w-5xl w-full text-center flex flex-col items-center gap-10 py-12">
+                <div class="flex flex-col gap-6">
+                    <!-- Enlarged Prominent Title -->
+                   <!-- Título -->
+                    <h1 class="animate-hero delay-1 text-on-surface text-5xl md:text-8xl font-black leading-[1.05] tracking-tight">
+                        Tu Futuro Financiero<br />empieza aquí
+                    </h1>
+                    <p
+                        class="animate-hero delay-1 text-on-surface-variant text-lg md:text-2xl font-medium leading-relaxed max-w-2xl mx-auto opacity-80">
+                        Configura tu salario, presupuesto y gastos en pocos pasos con
+                        nuestra herramienta profesional de gestión.
+                    </p>
+                </div>
+                <!-- Primary Action -->
+                <div class="animate-hero delay-3 flex flex-col sm:row gap-6 w-full justify-center">
+                    <a href="pages/bienvenida.html" class="w-full flex justify-center">
+                        <button
+                            class="inline-flex w-full max-w-[320px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-20 px-8 bg-primary text-on-primary shadow-2xl hover:bg-primary-container transition-all transform hover:-translate-y-1 active:scale-95 group">
+                            <span class="text-xl md:text-2xl font-bold tracking-wide">Empezar presupuesto</span>
+                            <span
+                                class="material-symbols-outlined ml-3 text-3xl transition-transform group-hover:translate-x-2"
+                                data-icon="arrow_forward">arrow_forward</span>
+                        </button>
+                    </a>
+                </div>
+                <!-- Benefits Section Integrated Below CTA -->
+                <div class="animate-hero delay-5 w-full grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
+                    <div
+                        class="flex items-center gap-4 p-5 rounded-2xl bg-white/40 backdrop-blur-md border border-white/60 shadow-sm transition-all hover:bg-white/60">
                         <div
-                            class="animate-hero-left delay-1 w-10 h-10 bg-surface-container-lowest rounded-full flex items-center justify-center border-2 border-primary-fixed">
-                            <span class="material-symbols-outlined text-[20px] text-primary" data-icon="savings"
-                                style="font-variation-settings: 'FILL' 1;">savings</span>
+                            class="size-12 rounded-full bg-secondary-container flex items-center justify-center text-on-secondary-container shrink-0">
+                            <span class="material-symbols-outlined" data-icon="payments">payments</span>
+                        </div>
+                        <div class="text-left">
+                            <h4 class="text-on-surface font-bold text-base leading-tight">
+                                Gestión Rápida
+                            </h4>
+                            <p class="text-on-surface-variant text-xs mt-1 opacity-70">
+                                Organiza tus finanzas en segundos.
+                            </p>
                         </div>
                     </div>
-            <h2 class="animate-hero-left delay-1 text-on-surface text-2xl font-black leading-tight tracking-tighter">
-                pigSave+
-            </h2>
-        </div>
-    </header>
-    <!-- Main Content Area -->
-    <main class="flex-1 flex flex-col items-center justify-center px-4 relative z-10">
-        <div class="max-w-5xl w-full text-center flex flex-col items-center gap-10 py-12">
-            <div class="flex flex-col gap-6">
-                <!-- Enlarged Prominent Title -->
-               <!-- Título -->
-                <h1 class="animate-hero delay-1 text-on-surface text-5xl md:text-8xl font-black leading-[1.05] tracking-tight">
-                    Tu Futuro Financiero<br />empieza aquí
-                </h1>
-                <p
-                    class="animate-hero delay-1 text-on-surface-variant text-lg md:text-2xl font-medium leading-relaxed max-w-2xl mx-auto opacity-80">
-                    Configura tu salario, presupuesto y gastos en pocos pasos con
-                    nuestra herramienta profesional de gestión.
-                </p>
-            </div>
-            <!-- Primary Action -->
-            <div class="animate-hero delay-3 flex flex-col sm:row gap-6 w-full justify-center">
-                <a href="pages/bienvenida.html"><button
-                        class="inline-flex min-w-[320px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-20 px-12 bg-primary text-on-primary shadow-2xl hover:bg-primary-container transition-all transform hover:-translate-y-1 active:scale-95 group">
-                        <span class="text-2xl font-bold tracking-wide">Empezar presupuesto</span>
-                        <span
-                            class="material-symbols-outlined ml-3 text-3xl transition-transform group-hover:translate-x-2"
-                            data-icon="arrow_forward">arrow_forward</span>
-                    </button>
-                </a>
-            </div>
-            <!-- Benefits Section Integrated Below CTA -->
-            <div class="animate-hero delay-5 w-full grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
-                <div
-                    class="flex items-center gap-4 p-5 rounded-2xl bg-white/40 backdrop-blur-md border border-white/60 shadow-sm transition-all hover:bg-white/60">
                     <div
-                        class="size-12 rounded-full bg-secondary-container flex items-center justify-center text-on-secondary-container shrink-0">
-                        <span class="material-symbols-outlined" data-icon="payments">payments</span>
+                        class="flex items-center gap-4 p-5 rounded-2xl bg-white/40 backdrop-blur-md border border-white/60 shadow-sm transition-all hover:bg-white/60">
+                        <div
+                            class="size-12 rounded-full bg-tertiary-container flex items-center justify-center text-on-tertiary-container shrink-0">
+                            <span class="material-symbols-outlined" data-icon="visibility_off">visibility_off</span>
+                        </div>
+                        <div class="text-left">
+                            <h4 class="text-on-surface font-bold text-base leading-tight">
+                                100% Privado
+                            </h4>
+                            <p class="text-on-surface-variant text-xs mt-1 opacity-70">
+                                Tus datos se quedan en tu navegador.
+                            </p>
+                        </div>
                     </div>
-                    <div class="text-left">
-                        <h4 class="text-on-surface font-bold text-base leading-tight">
-                            Gestión Rápida
-                        </h4>
-                        <p class="text-on-surface-variant text-xs mt-1 opacity-70">
-                            Organiza tus finanzas en segundos.
-                        </p>
-                    </div>
-                </div>
-                <div
-                    class="flex items-center gap-4 p-5 rounded-2xl bg-white/40 backdrop-blur-md border border-white/60 shadow-sm transition-all hover:bg-white/60">
                     <div
-                        class="size-12 rounded-full bg-tertiary-container flex items-center justify-center text-on-tertiary-container shrink-0">
-                        <span class="material-symbols-outlined" data-icon="visibility_off">visibility_off</span>
-                    </div>
-                    <div class="text-left">
-                        <h4 class="text-on-surface font-bold text-base leading-tight">
-                            100% Privado
-                        </h4>
-                        <p class="text-on-surface-variant text-xs mt-1 opacity-70">
-                            Tus datos se quedan en tu navegador.
-                        </p>
-                    </div>
-                </div>
-                <div
-                    class="flex items-center gap-4 p-5 rounded-2xl bg-white/40 backdrop-blur-md border border-white/60 shadow-sm transition-all hover:bg-white/60">
-                    <div
-                        class="size-12 rounded-full bg-primary-container flex items-center justify-center text-on-primary-container shrink-0">
-                        <span class="material-symbols-outlined" data-icon="bar_chart">bar_chart</span>
-                    </div>
-                    <div class="text-left">
-                        <h4 class="text-on-surface font-bold text-base leading-tight">
-                            Control Visual
-                        </h4>
-                        <p class="text-on-surface-variant text-xs mt-1 opacity-70">
-                            Sigue tu presupuesto en tiempo real.
-                        </p>
+                        class="flex items-center gap-4 p-5 rounded-2xl bg-white/40 backdrop-blur-md border border-white/60 shadow-sm transition-all hover:bg-white/60">
+                        <div
+                            class="size-12 rounded-full bg-primary-container flex items-center justify-center text-on-primary-container shrink-0">
+                            <span class="material-symbols-outlined" data-icon="bar_chart">bar_chart</span>
+                        </div>
+                        <div class="text-left">
+                            <h4 class="text-on-surface font-bold text-base leading-tight">
+                                Control Visual
+                            </h4>
+                            <p class="text-on-surface-variant text-xs mt-1 opacity-70">
+                                Sigue tu presupuesto en tiempo real.
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
+        </main>
+        <!-- Footer -->
+        <footer class="w-full py-12 bg-transparent shrink-0 flex flex-col items-center justify-center gap-2 px-4 text-center">
+            <div class="flex items-center justify-center gap-2 opacity-60 flex-wrap">
+                <span class="material-symbols-outlined text-sm">savings</span>
+                <p class="text-sm font-bold tracking-wide">pigSave+ © 2026 - Tu camino a la libertad financiera.</p>
+            </div>
+        </footer>
+        <!-- Abstract Background Decoration -->
+        <div
+            class="absolute -bottom-60 -left-60 w-[700px] h-[700px] bg-primary/5 rounded-full blur-[120px] pointer-events-none">
         </div>
-    </main>
-    <!-- Footer -->
-    <footer class="w-full py-12 bg-transparent shrink-0 flex flex-col items-center justify-center gap-2">
-        <div class="flex items-center gap-2 opacity-60">
-            <span class="material-symbols-outlined text-sm">savings</span>
-            <p class="text-sm font-bold tracking-wide">pigSave+ © 2026 - Tu camino a la libertad financiera.</p>
+        <div
+            class="absolute -top-60 -right-60 w-[700px] h-[700px] bg-secondary-container/10 rounded-full blur-[120px] pointer-events-none">
         </div>
-    </footer>
-    <!-- Abstract Background Decoration -->
-    <div
-        class="absolute -bottom-60 -left-60 w-[700px] h-[700px] bg-primary/5 rounded-full blur-[120px] pointer-events-none">
-    </div>
-    <div
-        class="absolute -top-60 -right-60 w-[700px] h-[700px] bg-secondary-container/10 rounded-full blur-[120px] pointer-events-none">
-    </div>
-    <div
-        class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1000px] h-[1000px] bg-white/30 rounded-full blur-[140px] -z-10 pointer-events-none">
+        <div
+            class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1000px] h-[1000px] bg-white/30 rounded-full blur-[140px] -z-10 pointer-events-none">
+        </div>
     </div>
 </body>
 
