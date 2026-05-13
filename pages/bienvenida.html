@@ -60,7 +60,7 @@
                                 <input
                                     id="nombre-usuario"
                                     class="w-full h-14 px-5 rounded-xl border-2 border-surface-container-high bg-surface-container-lowest text-on-surface placeholder:text-outline-variant focus:border-primary focus:ring-0 transition-all duration-200 text-body-lg shadow-sm"
-                                    placeholder="Ej. Mateo" type="text" oninput="this.value = this.value.replace(/[0-9]/g, '')" />
+                                    placeholder="Ej. Mateo" type="text" oninput="this.value = this.value.replace(/[^a-zA-ZáéíóúÁÉÍÓÚñÑ]/g, '')" />
                                 <div class="absolute inset-y-0 right-4 flex items-center pointer-events-none">
                                     <span class="material-symbols-outlined text-outline"
                                         data-icon="person">person</span>
