@@ -55,4 +55,4 @@ Este proyecto ha sido desarrollado con el esfuerzo de:
 
 | Billetera | Dashboard |
 |---|---|
-| ![Billetera](assets/img/billetera.png) | ![Dashboard](assets/img/dashboard.png) |
+| ![Billetera](assets/img/billeter.png) | ![Dashboard](assets/img/dashboard.png) |
