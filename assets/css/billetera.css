@@ -13,3 +13,39 @@
 .soft-transition {
     transition: all 0.2s ease-in-out;
 }
+
+@media print {
+    /* Ocultar lo que no debe aparecer en el PDF */
+    header,
+    #print-pdf-btn,
+    section:has(#budget-input),
+    section:has(#add-expense-btn),
+    footer,
+    th:last-child,
+    td:last-child {
+        display: none !important;
+    }
+
+    /* Fondo blanco, texto negro */
+    body, .bg-white, [class*="bg-surface"] {
+        background: white !important;
+        color: black !important;
+    }
+
+    /* Evitar que las filas se corten entre páginas */
+    tr {
+        break-inside: avoid;
+    }
+
+    /* Ancho completo */
+    .layout-content-container,
+    .max-w-\[1000px\] {
+        max-width: 100% !important;
+    }
+
+    /* Quitar padding lateral excesivo */
+    .px-4, .md\:px-20, .lg\:px-60 {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+}
