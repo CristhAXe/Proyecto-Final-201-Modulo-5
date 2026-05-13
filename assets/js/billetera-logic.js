@@ -165,8 +165,18 @@ document.addEventListener('DOMContentLoaded', () => {
         // Validación: Obtener suma de otros gastos para no exceder presupuesto
         const otrosGastos = estado.gastos.reduce((acc, g, i) => i === estado.indiceEdicion ? acc : acc + g.monto, 0);
         
-        if (!categoria || isNaN(monto) || monto <= 0) return alert('Por favor, ingresa datos válidos.');
-        if (monto + otrosGastos > estado.presupuesto) return alert('¡Error! El gasto supera tu presupuesto disponible.');
+        if (!categoria || isNaN(monto) || monto <= 0) return   Swal.fire({
+                title: 'Oops 👀',
+                text: 'El monto ingresado sobrepasa tu presupuesto  o no has seleccionado una categoría',
+                icon: 'warning',
+                confirmButtonText: 'Ok'
+            });
+        if (monto + otrosGastos > estado.presupuesto) return   Swal.fire({
+                title: 'Oops 👀',
+                text: 'El gasto supera tu presupuesto disponible.',
+                icon: 'warning',
+                confirmButtonText: 'Ok'
+            });
 
         if (estado.indiceEdicion !== null) {
             // Caso: Editando un gasto existente

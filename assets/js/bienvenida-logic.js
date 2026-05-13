@@ -1,5 +1,4 @@
 // Logic for Welcome Page (Bienvenida)
-
 document.addEventListener('DOMContentLoaded', () => {
     const inputNombre = document.getElementById('nombre-usuario');
     const btnContinuar = document.getElementById('btn-continuar');
@@ -8,8 +7,15 @@ document.addEventListener('DOMContentLoaded', () => {
         const nombre = inputNombre.value.trim();
         
         if (nombre === '') {
-            alert('Por favor, ingresa tu nombre para continuar.');
+             Swal.fire({
+                title: 'Oops 👀',
+                text: 'Entra tu nombre parra continuar',
+                icon: 'warning',
+                confirmButtonText: 'Ok'
+            });
+
             return;
+
         }
 
         // Save name to localStorage
